@@ -14,6 +14,9 @@ import static org.junit.Assert.*;
  */
 public class MainTest {
 
+    /** This test method is for testing Addition method of the calculator
+    *
+    */
 
     @Test
     public void testAddReturnTrue() {
@@ -23,6 +26,10 @@ public class MainTest {
         assertEquals(0.2, MainActivity.add(0.1,0.1),0);
     }
 
+    /** This test method is for testing Subtraction method of the calculator
+    *
+    */
+
     @Test
     public void testSubReturnTrue() {
 
@@ -30,7 +37,9 @@ public class MainTest {
         assertEquals(-1, MainActivity.sub(0,1),0);
         assertEquals(101.1, MainActivity.sub(102,0.9),0);
     }
-
+    /** This test method is for testing Multiplication method of the calculator
+    *
+    */
     @Test
     public void testMultiplyReturnTrue() {
 
@@ -39,6 +48,9 @@ public class MainTest {
         assertEquals(0, MainActivity.mul(0,10),0);
     }
 
+    /** This test method is for testing Division method of the calculator
+    *
+    */
     @Test
     public void testDivisionReturnTrue() {
 
