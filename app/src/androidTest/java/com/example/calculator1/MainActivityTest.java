@@ -41,6 +41,10 @@ public class MainActivityTest {
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
+    /** This test method is to check all the UI components such as buttons and EditText box have properly loaded upon stating the app
+    *
+    *
+    */
     @Test
     public void testUiComponents() {
         ViewInteraction editText = onView(
@@ -171,6 +175,9 @@ public class MainActivityTest {
 
 
     }
+    /** This test Method tests the app for a simple addtion operation, it checks whether the buttons are working and displaying the correct number, using the operation and if the correct answer is sisplayed int The EditText box 
+    *   
+     */
     @Test
     public void testAdditionOf1and1() {
         ViewInteraction materialButton = onView(
@@ -229,6 +236,8 @@ public class MainActivityTest {
                         isDisplayed()));
         editText.check(matches(withText("2")));
     }
+    /** This test Method is for one of our edge cases we covered in Lab1. When just the equal button is pressed and the EditText box is empty and no input goes through, the app should not crash.
+     */
     @Test
     public void testEqualsDoesNotCrashApp() {
         ViewInteraction materialButton = onView(
@@ -263,7 +272,7 @@ public class MainActivityTest {
                 description.appendText("Child at position " + position + " in parent ");
                 parentMatcher.describeTo(description);
             }
-
+            
             @Override
             public boolean matchesSafely(View view) {
                 ViewParent parent = view.getParent();
